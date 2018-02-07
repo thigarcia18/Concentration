@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import GameplayKit
 
 class Concentration {
     
@@ -38,6 +39,6 @@ class Concentration {
             let card = Card()
             cards += [card, card]
         }
-        // TODO: Shuffle the cards
+        cards = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: cards) as! [Card]
     }
 }
